@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    width: 80%;
+    height: 95vh;
+    /*border: 2px solid black;*/
+    margin: auto; /*only left side and right side margin will be adjust here - Bhavesh*/
+}
+
+header nav{
+    width: 95%;
+    height: 7%;
+    /*border: 1px ridge green;*/
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul{
+    list-style: none; /*will remove the styling on list items*/
+    display: flex;
+}
+
+header nav ul li{
+    padding: 5px 13px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 2px 12px 2px 12px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .3s linear;
+}
+
+header nav ul li a:hover{
+    color: gray;
+    /*font-size: 14px;*/
+}
+
+header nav ul li:nth-last-child(1){
+    background-color: black;
+    border-radius: 15px;
+    padding: 5px 20px;
+}
+
+header nav ul li:nth-last-child(1) a{
+    color: white;
+}
+
+header nav .bi-three-dots{
+    display: none;
+}
+
+header .content{
+    width: 100%;
+    height: 93%;
+    /*border: 1px solid red;*/
+    position: relative;
+}
+
+header .content::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    /*border: 1px solid blue;*/
+    background: url('/images/bg1.jpg') no-repeat center center/cover;
+    border-radius: 12px;
+    z-index: -1;
+}
+
+header .content .cont_box{
+    width: 500px;
+    height: auto;
+    color: white;
+    padding: 30px;
+}
+
+header .content .cont_box h1{
+    line-height: 40px;
+    font-weight: 800;
+}
+
+header .content .cont_box p{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(241,241,241);
+}
+
+header .content .cont_box button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 3px solid black;
+    background: black;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+header .content .cont_box button:hover{
+    background: rgb(68, 67, 67);
+    border: 3px solid rgb(68, 67, 67);;
+}
+
+header .content .trip_box{
+    position: relative;
+    width: 95%;
+    height: 200px;
+    margin: auto;
+    /*border: 1px solid black;*/
+}
+
+header .content .trip_box .search_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 10px 15px  10px rgb(30, 29, 29);
+    z-index: 1;
+    padding: 10px 20px;
+}
+
+header .content .trip_box .search_box .card{
+    width: 200px;
+    height: 100%;
+}
+
+header .content .trip_box .search_box .card h4{
+    font-size: 15px;
+    margin: 0;
+    font-weight: 700;
+}
+
+header .content .trip_box .search_box .card .bi{
+    position: absolute;
+    font-size: 13px;
+    margin: 2px 0px 0px 5px;
+    transition: .3s linear;
+}
+
+header .content .trip_box .search_box .card input{
+    margin-top: 3px;
+    padding: 5px 0px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+header .content .trip_box .search_box input[type="button"]{
+    background: black;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+header .content .trip_box .search_box input[type="button"]:hover{
+    background: rgb(68, 67, 67);
+    /*border: 3px solid rgb(98, 97, 97);*/
+}
+
+header .trip_box .travel_box{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    /*background: black;*/
+    top: 40px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0px 20px 25px -10px rgb(165,165,165);
+}
+
+header .trip_box .travel_box::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(241,241,241, .10);
+    backdrop-filter: blur(5px);
+    z-index: -1;    
+}
+
+header .trip_box .travel_box h4{
+    margin: 0;
+    padding: 60px 0px 15px 1.7%;
+}
+
+header .trip_box .travel_box .cards{
+    width: 96%;
+    height: auto;
+    margin: 0px auto;
+    /*border: 1px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header .trip_box .travel_box .cards .card{
+    width: 220px;
+    height: 180px;
+    /*border: 1px solid black;*/
+}
+
+header .trip_box .travel_box .cards .card h3{
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*header .trip_box .travel_box .cards .card h3 img{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+
+}*/
+
+header .trip_box .travel_box .cards .card img{
+    width: 100%;
+    height: 50%;
+}
+
+header .trip_box .travel_box .cards .card .btn_city{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*border: 1px solid black;*/
+}
+
+header .trip_box .travel_box .cards .card .btn_city a{
+    text-decoration: none;
+    background:black;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 11px;
+    transition: .3s linear;
+}
+
+header .trip_box .travel_box .cards .card .btn_city a:hover{
+    background: rgb(68, 67, 67);
+    /*border: 3px solid rgb(98, 97, 97);*/
+}
+
+header .trip_box .travel_box .cards .card .btn_city h5{
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 15px;
+}
+
+.holiday_ideas{
+    width: 60%;
+    height: auto;
+    /*border: 1px solid black;*/
+    margin: auto;
+    margin-top: 100px;
+    transition: .5s linear;
+}
+
+.holiday_ideas h1{
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+.holiday_ideas p{
+    font-weight: 200;
+    text-align: center;
+    margin: 0;
+}
+
+.holiday_ideas .cards{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*border: 1px solid red;*/
+    flex-wrap: wrap;
+}
+
+.holiday_ideas .cards .card{
+    position: relative;
+    width: 200px;
+    height: 350px;
+   /* border: 1px solid blue;*/
+    margin: 10px;
+}
+
+.holiday_ideas .cards .card h3{
+    width: 140px;
+    padding: 6px 0px;
+    background: rgb(165,243,165);
+    border-radius: 20px;
+    font-size: 12px;
+    display: grid;
+    place-items:center;
+    margin: auto;
+    text-align: center;
+}
+
+.holiday_ideas .cards .card .img_text{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-top: 5px;
+}
+
+.holiday_ideas .cards .card .img_text img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.holiday_ideas .cards .card .img_text h4{
+    position: absolute;
+    font-size: 9px;
+    padding: 10px 0px;
+    bottom: 0;
+    margin: 0;
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+
+.holiday_ideas .cards .card .img_text h4::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(255,255,255,.1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+}
+
+.holiday_ideas .cards .card .cont_box{
+    width: 99.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(224, 223, 223);
+    padding: 5px 0px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.holiday_ideas .cards .card .cont_box .cost, .days{
+    margin: 0px 8px;
+
+}
+
+.holiday_ideas .cards .card .cont_box .cost .heart_chat{
+    display: flex;
+    align-items: center;
+}
+
+.holiday_ideas .cards .card .cont_box .cost .heart_chat i:nth-child(1){
+    color: red;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.holiday_ideas .cards .card .cont_box .cost .heart_chat i span{
+    color: black;
+    margin-left: 3px;
+    font-style: normal;
+}
+
+.holiday_ideas .cards .card .cont_box .cost .heart_chat i:nth-child(2){
+    color: rgb(112,196,229);
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.holiday_ideas .cards .card .cont_box .cost .heart_chat i span{
+    color: black;
+    margin-left: 3px;
+    font-style: normal;
+}
+
+.holiday_ideas .cards .card .cont_box .cost .info_price{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.holiday_ideas .cards .card .cont_box .cost .info_price a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 11px;
+    transition: .3s linear;
+    margin-right: 13px;
+}
+
+.holiday_ideas .cards .card .cont_box .cost .info_price a:hover{
+    color: gray;
+}
+
+.holiday_ideas .cards .card .cont_box .cost .info_price h4{
+    margin: 0;
+    font-size: 13px;
+}
+
+.holiday_ideas .cards .card .cont_box .days{
+    color: white;
+    background: black;
+    font-size: 6px;
+    border-radius: 80%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s linear;
+    margin: -40px 45px 2px 125px;
+}
+
+.holiday_ideas .cards .card .cont_box .days:hover{
+    transform: rotate(360deg);
+}
+
+.destinations{
+    width: 45%;
+    height: auto;
+    /*border: 1px solid black;*/
+    margin: auto;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.destinations .dest_box , .img_box{
+    position: relative;
+    width: 50%;
+    height: auto;
+    /*border: 1px solid blue;*/
+}
+
+.destinations .dest_box h4{
+    margin: 0;
+    font-size: 20px;
+    line-height: 10px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+
+.destinations .dest_box li{
+    list-style-type: none;
+    padding: 0px 0px 8px 0px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.destinations .dest_box button{
+    font-size: 12px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    transition: .3s linear;
+    margin-top: 20px;
+}
+
+.destinations .dest_box button:hover{
+    background: gray;
+    border: 2px solid gray;
+}
+
+.destinations .img_box img{
+    width: 100%;
+    height: 420px;
+    border-radius: 5px;
+}
+
+.destinations .img_box .msg{
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 160px;
+    height: 50px;
+    background: white;
+    box-shadow: 0px 5px 20px gray;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.destinations .img_box .cont{
+    margin-left: 15px;
+}
+
+.destinations .img_box .cont h4{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.destinations .img_box .cont .bi{
+    /*border: 1px solid green;*/
+    display: flex;
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
+.destinations .img_box .cont .bi:nth-child(1){
+    color: red;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.destinations .img_box .cont .bi span{
+    font-style: normal;
+    margin-left: 3px;
+    font-size: 12px;
+    color: black;
+    margin-top: -3px;
+}
+
+.destinations .img_box .cont .bi:nth-child(2){
+    color:rgb(112,196,229);
+    margin-right: 5px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.destinations .img_box .msg:nth-child(2){
+    top: 10%;
+    left: 55%;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background: rgb(249, 249,255);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer h2{
+    text-align: center;
+    margin: 0;
+    margin-top: 25px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+footer p{
+    text-align: center;
+    width: 400px;
+    font-size: 13px;
+}
+
+footer .input{
+    box-shadow: 0px 3px 20px -1px gray;
+    border-radius: 20px;
+}
+
+footer .input input{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+footer .input button{
+    background: #000;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 0px 20px 20px 0px;
+    color: white;
+    cursor: pointer
+}
+
+footer .input button:hover{
+    background: gray;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    /*align-items: center;*/
+    margin-top: 30px;
+}
+
+footer ul li{
+    text-align: center;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+footer ul li h6{
+    font-size: 11px;
+    font-weight: 600;
+    max-width: 120px;
+    margin: 0;
+    line-height: 20px;
+    border-top: 1px solid #000;
+    padding-top: 3px;
+}

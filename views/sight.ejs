@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landmark</title>
+    <link rel="stylesheet"  href="/css/bootstrap.min.css">
+	<link rel="stylesheet"  href="/css/style.css">
+
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+	<link rel="stylesheet" href="/css/discover_css.css">
+
+</head>
+<body>
+    <header >
+		<div style="display: flex;justify-content:center">
+			<div style="width: 80%;"><nav>
+              <div class="nav_bar" id="navbarCollapse">
+                <ul>
+                  <a href="/" id="title">Exploremates</a>
+                  <li><a href="/discover.html">Discover</a></li>
+                  <li><a href="">Holiday Ideas</a></li>
+                  <li><a href="">Image Gallary</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#contactUs">Contacts</a></li>
+                  <li><a href="/admin" id="login">Login</a></li>
+                </ul>
+            </div>
+          </nav>
+		</div>
+		</div>
+	</header>
+    <main>
+        <div class="container sight-container">
+            <h1><%= title %></h1>
+            <hr>
+            <img src="<%= imageUrl %>" alt="big-ben">
+            <hr>
+            <p class="date"><%= date %></p>
+            <hr>
+            <p class="text"><%= text %></p>
+            <div class="map"></div>
+        </div>
+	</main>
+	
+	<script src="/js/maps.js"></script>
+</body>
+</html>

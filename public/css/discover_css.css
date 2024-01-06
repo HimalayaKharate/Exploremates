@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav_bar ul {
+    display: flex;
+}
+nav{
+    width: 90%;
+    height: 8vh;
+}
+
+.nav_bar{
+    margin: 1%;
+
+}
+
+.nav_bar ul * {
+    padding: 1%;
+    margin: 1%;
+    text-wrap: nowrap;
+}
+
+a,
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.nav_bar ul li{
+    list-style: none;
+}
+
+#login{
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 20px;
+}
+#title{
+    font-weight: 700;
+}
+
+.my_contain{
+    padding: 0%;
+    margin: 10px auto;
+    
+}
+
+
+#call{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    color: brown;
+}
+
+
+footer{
+    width: 100%;
+    height: 60vh;
+    background: rgb(249, 249,255);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer h2{
+    text-align: center;
+    margin: 0;
+    margin-top: 25px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+footer p{
+    text-align: center;
+    width: 400px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+footer .input{
+    box-shadow: 0px 3px 20px -1px gray;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+footer .input input{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+footer .input button{
+    background: #000;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 0px 20px 20px 0px;
+    color: white;
+    cursor: pointer
+}
+
+footer .input button:hover{
+    background: gray;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    /*align-items: center;*/
+    margin-top: 30px;
+}
+
+footer ul li{
+    text-align: center;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+footer ul li h6{
+    font-size: 11px;
+    font-weight: 600;
+    max-width: 120px;
+    margin: 0;
+    line-height: 20px;
+    border-top: 1px solid #000;
+    padding-top: 3px;
+}

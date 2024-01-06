@@ -1,0 +1,235 @@
+@media screen and (max-width:1485px){
+    .holiday_ideas{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:1370px){
+    .holiday_ideas{
+        width: 72%;
+    }
+}
+
+@media screen and (max-width:1250px){
+    header{
+        width: 90%;
+    }
+    .holiday_ideas{
+        width: 82%;
+    }
+    .destinations{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:1109px){
+    header{
+        width: 95%;
+    }
+    .holiday_ideas{
+        width: 95%;
+    }
+    .destinations{
+        width: 60%;
+    }
+    header .content .trip_box .search_box{
+        width: 70%;
+    }
+    header .content .trip_box .travel_box .cards{
+        overflow: auto;
+    }
+    header .content .trip_box .travel_box .cards .card{
+        min-width: 220px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width:1051px){
+        header{
+            width: 100%;
+        }
+}
+
+@media screen and (max-width:999px){
+    header nav ul{
+        position: absolute;
+        width: 250px;
+        height: auto;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px gray;
+        justify-content: center;
+        top: -100%;
+        right: 30%;
+        left: 35%;
+        z-index: 99999999999999;
+        padding: 10px 20px;
+        transition: .8s linear;
+    }
+
+    /*javascript class*/
+    header nav .ul_active{
+        top: 0;
+    }
+
+    header nav ul li{
+        padding: 8px 0px;
+        text-align: center;
+    }
+
+    header nav .bi-three-dots{
+        display: unset;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width:950px){
+    header .content .trip_box .search_box{
+        width: 85%;
+        box-shadow: 0px 15px 10px rgb(30, 29, 29);
+    }
+    header .content .trip_box .search_box .card{
+        margin-right: 8px;
+    }
+    .destinations{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:714px){
+    header{
+        width: 100%;
+    }
+    header nav ul{
+        position: absolute;
+        width: 150px;
+        height: auto;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px gray;
+        justify-content: center;
+        top: -100%;
+        right: 30%;
+        left: 25%;
+        z-index: 99999999999999;
+        padding: 10px 20px;
+        transition: .8s linear;
+    }
+
+    /*javascript class*/
+    header nav .ul_active{
+        top: 0;
+    }
+
+    header nav ul li{
+        padding: 8px 0px;
+        text-align: center;
+    }
+
+    header nav .bi-three-dots{
+        display: unset;
+    }
+    header .content .trip_box .search_box{
+        width: 93%;
+        box-shadow: 0px 15px 10px rgb(30, 29, 29);
+    }
+
+    .holiday_ideas{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:650px){
+    header .content .trip_box .search_box .card{
+        width: 140px;
+    }
+    header .content .trip_box .search_box input[type="button"]{
+        position: absolute;
+        right: 10px;
+        bottom: -43px;
+        font-size: 13px;
+    }
+    .holiday_ideas{
+        width: 85%;
+        margin-top: 0px;
+    }
+    .destinations{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .destinations .dest_box, .img_box{
+        position: relative;
+        width: 55%;
+        height: auto;
+
+    }
+    .destinations .dest_box{
+        margin-top: 30px;
+    }  
+}
+
+@media screen and (max-width:541px){
+    header .content .cont_box{
+        width: 85%;
+    }
+    header .content .cont_box h1{
+        width: 300px;
+        font-size: 22px;
+    }
+    header .content .cont_box p{
+        width: 300px;
+        font-size: 12px;
+    }
+    header .content .trip_box .search_box{
+        width: 89%;
+        
+    }
+    header .content .trip_box .search_box .card{
+        width: 110px;
+    }
+    header .content .trip_box .search_box .card input{
+        width: 100px;
+    }
+    .holiday_ideas h1{
+        font-size: 22px;
+    }
+    .holiday_ideas p{
+        font-size: 14px;
+    }
+    .holiday_ideas .cards{
+        justify-content: center;
+    }
+    .destinations .dest_box, .img_box{
+        width: 80%;
+    }
+    footer ul li h6{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:411px){
+    .holiday_ideas{
+        margin-top: 80px;
+    }
+    footer p{
+        width: 330px;
+        font-size: 12px;
+    }
+    footer ul li{
+        margin-right: 20px;
+    }
+    .destinations .img_box .msg:nth-child(2){
+        left: 50%;
+    }
+}
+
+@media screen and (max-width:375px){
+    .holiday_ideas{
+        margin-top: 15px;
+    }
+    .destinations .img_box .msg:nth-child(2){
+        left: 45%;
+    }
+}
