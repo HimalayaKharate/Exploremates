@@ -14,11 +14,12 @@
             <h4>Exploremates</h4>
             <ul id="menu_box">
                 <li><a href="discover.html">Discover</a></li>
-                <li><a href="@">Holiday Ideas</a></li>
+                <li><a href="#hd">Holiday Ideas</a></li>
                 <li><a href="@">Image Gallary</a></li>
                 <li><a href="./aboutus.html">About Us</a></li>
                 <li><a href="#contactUs">Contact Us</a></li>
-                <li><a href="/admin">Login</a></li>
+                <li><a href="/user_login">Login</a></li>
+                <li><a href="/user_login " class="log-out-btn">Logout</a></li>
             </ul>
             <i class="bi bi-three-dots"></i>
         </nav>
@@ -78,90 +79,11 @@
             </div>
         </div>
     </header>
-    <div class="holiday_ideas">
+    <div class="holiday_ideas" id="hd">
         <h1>Best Holiday Ideas</h1>
         <p>choose Your Next Destination</p>
-        <div class="cards">
-            <div class="card">
-                <h3>Lotus-Temple, Delhi</h3>
-                <div class="img_text">
-                    <img src="images/lotus-delhi.jpg" alt="">
-                    <h4>The Lotus Temple is an edifice of Bahai faith, resembling a lotus flower. It’s constructed purely with white marble and designed by Furiburz Sabha.</h4>
-                </div>
-                <div class="cont_box">
-                    <div class="cost">
-                        <div class="heart_chat">
-                            <i class="bi bi-bookmark-heart-fill"><span>8565</span></i>
-                            <i class="bi bi-chat-fill"><span>5250</span></i>
-                        </div>
-                        <div class="info_price">
-                            <a href="">More Info</a>
-                            <h4>$360</h4>
-                        </div>
-                        <div class="days">Expected<br>Days<br>3</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Golden Temple</h3>
-                <div class="img_text">
-                    <img src="images/golden temple.jpg" alt="">
-                    <h4>Also known as Sri Harmandir Sahib, Golden Temple is considered to be the most important pilgrimage site amongst Sikhs and will leave you in awe with its jaw-dropping gold and marble edifice.</h4>
-                </div>
-                <div class="cont_box">
-                    <div class="cost">
-                        <div class="heart_chat">
-                            <i class="bi bi-bookmark-heart-fill"><span>12537</span></i>
-                            <i class="bi bi-chat-fill"><span>7230</span></i>
-                        </div>
-                        <div class="info_price">
-                            <a href="">More Info</a>
-                            <h4>$390</h4>
-                        </div>
-                        <div class="days">Expected<br>Days<br>4</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Hawa Mahal, Jaipur</h3>
-                <div class="img_text">
-                    <img src="images/hawa mahal.jpg" alt="">
-                    <h4>An iconic landmark of the city, the honeycomb-shaped palace features beautiful jharokhas and windows.</h4>
-                </div>
-                <div class="cont_box">
-                    <div class="cost">
-                        <div class="heart_chat">
-                            <i class="bi bi-bookmark-heart-fill"><span>15433</span></i>
-                            <i class="bi bi-chat-fill"><span>8302</span></i>
-                        </div>
-                        <div class="info_price">
-                            <a href="">More Info</a>
-                            <h4>$410</h4>
-                        </div>
-                        <div class="days">Expected<br>Days<br>3</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Ellora Caves</h3>
-                <div class="img_text">
-                    <img src="images/ellora caves.jpg" alt="">
-                    <h4>Featuring Buddhist, Hindu and Jain monuments, Ellora Caves are a stunning rock-cut temple complex with 34 monasteries and temples.</h4>
-                </div>
-                <div class="cont_box">
-                    <div class="cost">
-                        <div class="heart_chat">
-                            <i class="bi bi-bookmark-heart-fill"><span>7250</span></i>
-                            <i class="bi bi-chat-fill"><span>4560</span></i>
-                        </div>
-                        <div class="info_price">
-                            <a href="">More Info</a>
-                            <h4>$290</h4>
-                        </div>
-                        <div class="days">Expected<br>Days<br>4</div>
-                    </div>
-                </div>
-            </div>
+        <div class="cards dy_card">
+            <!-- Cards are dynamically created -->
         </div>
     </div>
     <div class="destinations">
@@ -234,5 +156,6 @@
 <script src="js/posts.js"></script>
 <script src="js/emails.js"></script>
 <script src="js/main.js"></script>
+<script src="js/main2.js"></script>
 </body>
 </html>

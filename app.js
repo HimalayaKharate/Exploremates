@@ -10,6 +10,7 @@ let usersRouter = require('./routes/users');
 let Post = require('./models/posts').Post;
 let auth = require('./controllers/auth');
 let subRouter = require('./routes/sub');
+let loginRouter = require('./routes/user_login');
 app.set('view engine', 'ejs');
 
 
@@ -33,7 +34,7 @@ app.use('/email-requests',subRouter);
 then it will be redirected callback-requests.js*/
 app.use('/emails', emailsRouter);
 app.use('/users', usersRouter); 
-
+app.use('/user_login', loginRouter);
 app.get('/sight', async (req, res) =>{
     let id = req.query.id;
     let post = await Post.findOne({id:id});
@@ -46,7 +47,9 @@ app.get('/sight', async (req, res) =>{
     })
 })
 
-
+app.get('/user_login',(req,res)=>{
+    res.render('user_login');
+})
 
 
 app.get('/admin', (req,res) =>{
@@ -56,6 +59,17 @@ app.get('/admin', (req,res) =>{
         res.render('admin');
     }else{
         res.redirect('/login'); //redirecting sign-in page!
+    }
+})
+
+
+app.get('/buy', (req,res) =>{
+    /*to read the cookie */
+    let token = req.cookies['user_token'];
+    if(token && auth.checkToken(token)){ //token should not be empty!
+        res.render('buy');
+    }else{
+        res.redirect('/user_login'); //redirecting sign-in page!
     }
 })
 
