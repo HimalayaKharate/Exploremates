@@ -12,7 +12,8 @@ let postSchema = new Schema({
     description: String,
     text: String,
     country: String,
-    imageUrl: String
+    imageUrl: String,
+    mapUrl: String
 });
 //Creating model
 let Post = mongoose.model('Post', postSchema);

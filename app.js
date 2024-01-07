@@ -41,7 +41,8 @@ app.get('/sight', async (req, res) =>{
         title: post.title,
         imageUrl: post.imageUrl,
         date: post.date,
-        text: post.text
+        text: post.text,
+        mapUrl:post.mapUrl
     })
 })
 
