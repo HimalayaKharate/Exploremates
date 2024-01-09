@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', async function(){
     this div is empty without any articles*/
     articles.innerHTML='';
 
+    let i = 4;
+    
     posts.forEach((post) =>{
+        if(i > 0){
         let postHTML = `
         <div class="card">
                <h3>${post.title}</h3>
@@ -34,6 +37,8 @@ document.addEventListener('DOMContentLoaded', async function(){
 `;
     //Let's add some articles
     articles.insertAdjacentHTML('beforeend', postHTML);
+    i--;
+        }
     })
 })
 

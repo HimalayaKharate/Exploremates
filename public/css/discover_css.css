@@ -24,6 +24,8 @@ nav{
     text-wrap: nowrap;
 }
 
+
+.nav_bar ul li 
 a,
 a:hover{
     color: black;
@@ -41,6 +43,8 @@ a:hover{
     border-radius: 20px;
 }
 #title{
+    color: #000;
+    text-decoration: none;
     font-weight: 700;
 }
 
@@ -138,3 +142,10 @@ footer ul li h6{
     border-top: 1px solid #000;
     padding-top: 3px;
 }
+
+
+.map iframe{
+    width: 100%;
+    height: 50vh;
+}
+

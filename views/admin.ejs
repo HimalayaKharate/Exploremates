@@ -6,28 +6,22 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/discover_css.css">
+    <link rel="stylesheet" href="/css/finalabout.css">
 </head>
 <body>
     <header >
-		<div style="display: flex;justify-content:center">
-			<div style="width: 80%;"><nav>
-              <div class="nav_bar" id="navbarCollapse">
-                <ul>
-                  <a href="/" id="title">Exploremates</a>
-                  <li><a href="/discover.html">Discover</a></li>
-                  <li><a href="">Holiday Ideas</a></li>
-                  <li><a href="">Image Gallary</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#contactUs">Contacts</a></li>
-                  <li class="nav-item">
-                    <button class="btn btn-outline log-out-btn">Log Out</button>
-                </li>
-                <li><a href="https://docs.google.com/spreadsheets/d/1pmJwcT1z2bT05mByJhjG06dyEV1Q7qX8FeJlRt1Q2m4/edit?usp=sharing">Feedback Responses</a></li>
-                </ul>
-            </div>
-          </nav>
-		</div>
-		</div>
+		<nav>
+            <h4><a href="/" style="color: black; text-decoration:none">Exploremates</a></h4>
+            <ul>
+                <li><a href="/discover">Discover</a></li>
+                <li><a href="/#hd">Holiday Ideas</a></li>
+                <li><a href="/image">Image Gallary</a></li>
+                <li><a href="/finalabout">About Us</a></li>
+                <li><a href="/discover#contactUs">Contact Us</a></li> 
+                <li><a href="/" class="log-out-btn">Log out</a></li>
+            </ul>
+            <i class="bi bi-three-dots"></i>
+        </nav>
 	</header>
     <main>
         <div class="container page-wrapper">
@@ -41,7 +35,8 @@
                                 <a class="nav-link active" id="v-pills-articles-tab" data-toggle="pill" href="#v-pills-articles" role="tab" aria-controls="v-pills-articles" aria-selected="true">Articles</a>
                                 <a class="nav-link" id="v-pills-mails-tab" data-toggle="pill" href="#v-pills-mails" role="tab" aria-controls="v-pills-mails" aria-selected="false">Mails</a>
                                 <a class="nav-link" id="v-pills-callback-tab" data-toggle="pill" href="#v-pills-callback" role="tab" aria-controls="v-pills-callback" aria-selected="false">Callback requests</a>
-                                <a class="nav-link" id="v-pills-sub-tab" data-toggle="pill" href="#v-pills-sub" role="tab" aria-controls="v-pills-sub" aria-selected="false">Subscribe</a>
+                                <a class="nav-link" id="v-pills-sub-tab" data-toggle="pill" href="#sub" role="tab" aria-controls="sub" aria-selected="false">Subscribe</a>
+                                <a class="nav-link" id="v-pills-user-tab" data-toggle="pill" href="#user" role="tab" aria-controls="user" aria-selected="false">Users</a>
                               </div>
                         </div>
                     </div>
@@ -58,7 +53,8 @@
                                 </div>
                                 <div class="tab-pane fade" id="v-pills-mails" role="tabpanel" aria-labelledby="v-pills-mails-tab">Mails content</div>
                                 <div class="tab-pane fade" id="v-pills-callback" role="tabpanel" aria-labelledby="v-pills-callback-tab">Callback requests content</div>
-                                <div class="tab-pane fade" id="v-pills-sub" role="tabpanel" aria-labelledby="v-pills-sub-tab"></div>
+                                <div class="tab-pane fade" id="sub" role="tabpanel" aria-labelledby="v-pills-sub-tab"></div>
+                                <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="v-pills-user-tab"></div>
                                 <div class="tab-pane fade" id="v-pills-create-post" role="tabpanel" aria-labelledby="v-pills-create-post-tab">
                                     <h2>Create Post</h2>
                                     <form class="create-post-form">
@@ -125,7 +121,7 @@
 <script src="/admin/js/emails.js"></script>
 <script src="/admin/js/sub.js"></script>
 <script src="/admin/js/main.js"></script>
-
+<script src="/admin/js/user.js"></script>
 
 </body>
 </html>

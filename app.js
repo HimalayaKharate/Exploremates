@@ -14,7 +14,6 @@ let loginRouter = require('./routes/user_login');
 const { render } = require('ejs');
 app.set('view engine', 'ejs');
 
-
 mongoose.connect('mongodb://localhost/travels', {useUnifiedTopology: true , useNewUrlParser: true});
 
 app.use(express.json());
@@ -27,7 +26,6 @@ let imageStorage = multer.diskStorage({
 app.use(multer({storage: imageStorage}).single('imageFile'));
 app.use(express.static('public'));
 app.use(cookieParser()); //so that cookies are automatically generated for every request.
-
 app.use('/posts', postsRouter);
 app.use('/callback-requests', callbackRequestsRouter);
 app.use('/email-requests',subRouter);
@@ -39,7 +37,15 @@ app.use('/user_login', loginRouter);
 app.get('/sight', async (req, res) =>{
     let id = req.query.id;
     let post = await Post.findOne({id:id});
+    var log;
+    let token = req.cookies['user_token'];
+    if(token && auth.checkToken(token)){ //token should not be empty!
+       log = 'log out'
+    }else{
+        log = 'log in'
+    }
     res.render('sight', {
+        log: log,
         title: post.title,
         imageUrl: post.imageUrl,
         date: post.date,
@@ -93,5 +99,42 @@ app.get('/login', (req, res) =>{
     res.render('login');
 })
 
+app.get('/finalabout',(req,res)=>{
+    var log;
+    let token = req.cookies['user_token'];
+    if(token && auth.checkToken(token)){ //token should not be empty!
+       log = 'log out'
+    }else{
+        log = 'log in'
+    }
+     res.render('finalabout',{
+        log: log
+     });
+})
+app.get('/discover',(req,res)=>{
+    var log;
+    let token = req.cookies['user_token'];
+    if(token && auth.checkToken(token)){ //token should not be empty!
+       log = 'log out'
+    }else{
+        log = 'log in'
+    }
+     res.render('discover',{
+        log: log
+     });
+})
+
+app.get('/image',(req,res)=>{
+    var log;
+    let token = req.cookies['user_token'];
+    if(token && auth.checkToken(token)){ //token should not be empty!
+       log = 'log out'
+    }else{
+        log = 'log in'
+    }
+     res.render('imagegallary',{
+        log: log
+     });
+})
 
 app.listen(3000, () => console.log('Listening 3000...'));

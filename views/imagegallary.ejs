@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/finalabout.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .gallery {
+      border-radius: 25px;
+      margin: 15px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      float: left;
+      width: calc(33.33% - 30px);
+      box-sizing: border-box;
+      position: relative;
+      box-shadow: 10px 14px 27px 4px #000;
+    }
+
+    .gallery:hover {
+      border: 1px solid #777;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .gallery:hover img {
+      transform: scale(1.1);
+    }
+
+    .desc {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery:hover .desc {
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .gallery:nth-child(odd) img {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .gallery:nth-child(even) img {
+      animation: bounce 1s ease-in-out;
+    }
+
+    @media screen and (max-width: 768px) {
+      .gallery {
+        width: 100%;
+        margin: 15px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header >
+            
+    <nav>
+      <h4><a href="/" style="color: black; text-decoration:none">Exploremates</a></h4>
+      <ul>
+          <li><a href="/discover">Discover</a></li>
+          <li><a href="/#hd">Holiday Ideas</a></li>
+          <li><a href="/image">Image Gallary</a></li>
+          <li><a href="/discover#contactUs">Contact Us</a></li> 
+          <li><a href="/finalabout">About Us</a></li>
+          <li><a href="/user_login"><%= log %></a></li>
+      </ul>
+    </nav>
+	</header>
+
+  <h1>Image Gallery</h1>
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.tourmyindia.com/blog//wp-content/uploads/2021/08/Gateway-of-India-Mumbai.jpg">
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2021/08/Gateway-of-India-Mumbai.jpg" alt="Gateway of India">
+      <div class="desc">Gateway of India</div>
+    </a>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/agra-taj-mahal.jpg">
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/agra-taj-mahal.jpg" alt="Taj Mahal,Agra">
+      <div class="desc">Taj Mahal,Agra</div>
+    </a>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Delhi.jpg">
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Delhi.jpg" alt="Red Forte,Delhi">
+      <div class="desc">Red Forte,Delhi</div>
+    </a>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/varanasi.jpg">
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/varanasi.jpg" alt="Varanasi,uttar pradesh">
+      <div class="desc">Varanasi,uttar pradesh</div>
+    </a>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/mysore-palace.jpg">
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/mysore-palace.jpg" alt="Mysore, Karnataka">
+      <div class="desc">Mysore, Karnataka</div>
+    </a>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Rishikesh-Rafting.jpg">
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Rishikesh-Rafting.jpg" alt="Rishikesh, Uttarakhand">
+      <div class="desc">Rishikesh, Uttarakhand</div>
+    </a>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.tourmyindia.com/blog//wp-content/uploads/2015/03/Amritsar-Golden-Temple.jpg">
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2015/03/Amritsar-Golden-Temple.jpg" alt="Amritsar-Golden-Temple">
+      <div class="desc">Amritsar-Golden-Temple</div>
+    </a>
+  </div>
+
+  
+  <div class="gallery">
+    <a target="_blank" href="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Imphal-City-View.jpg" alt="Amritsar-Golden-Temple">
+
+    </a>
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Imphal-City-View.jpg">
+      <div class="desc">Imphal, Manipur</div>
+    </a>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.tourmyindia.com/blog//wp-content/uploads/2022/09/Spiti-Valley-Best-Time-to-Visit-Himachal-768x472.jpg">
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2022/09/Spiti-Valley-Best-Time-to-Visit-Himachal-768x472.jpg">
+      <div class="desc">Spiti Valley, Himachal Pradesh:  Beauty of the Cold Desert</div>
+    </a>
+  </div>  
+  
+
+</body>
+</html>

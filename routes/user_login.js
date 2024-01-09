@@ -3,6 +3,7 @@ let express =  require('express');
 let router = express.Router();
 let bcrypt = require('bcrypt');
 let auth = require('../controllers/auth');
+let authMiddleware = require('../middleware/auth')
 const { LoginUser } = require('../models/user_login');
 
 router.post('/login', async (req, res) =>{
@@ -49,6 +50,37 @@ router.post('/register', async (req, res) =>{
     }else{
         res.send('Rejected');
     }
+})
+
+
+
+//Get posts from server
+router.get('/register', async (req,res) =>{
+    let posts = await LoginUser.find(); //find() func is async! 
+    res.send(posts);
+})
+
+//Get post from server according to id 
+router.get('/register:id', async (req, resp) => {
+    let id = req.params.id;
+    let post = await LoginUser.findOne({id: id});
+    resp.send(post);
+})
+
+
+
+//Deleting post
+router.delete('/register:id', authMiddleware, async (req, res) => {
+    let id = req.params.id;
+   await LoginUser.deleteOne({id:id}); //deleteOne async func!
+   res.send('Deleted!');
+})
+
+//Updating post
+router.put('/register:id', authMiddleware, async (req, res) => {
+    let id = req.params.id;
+   await LoginUser.updateOne({id:id}, req.body); //updateOne async func!
+   res.send('Updated!');
 })
 
 

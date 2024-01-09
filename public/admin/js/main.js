@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded',function(){
     addCallbackRequests();
     addEmails();
     addSub();
+    addUser();
 })
 
 addPostBtn.addEventListener('click', function(){
@@ -81,10 +82,34 @@ async function addPosts(){
         let requests = await getEmailsRequests(); 
         console.log(requests);
         //requests: we have an array of all requests stored in the DB.
-         let Block = document.querySelector('#v-pills-sub');
+         let Block = document.querySelector('#sub');
          /*we have to be sure that every time we work with the requestsBlock,
          this div is empty without any requests*/
          Block.innerHTML='';
+
+          let i =1; //order number
+         requests.forEach((request) =>{
+                let requestHTML = `
+            <article class="d-flex justify-content-between align-items-center article-inline">
+                <div class="num w5">${i++}</div>
+                <input class="id" type="hidden" value="${request.id}">
+                <div class="name w60">${request.email}</div>
+                <div class="date w30">${request.date}</div>
+            </article>`;
+            //Let's add some articles
+            console.log(requestHTML)
+            Block.insertAdjacentHTML('beforeend', requestHTML);
+        })
+    }
+
+
+    async function addUser(){
+        let requests = await getUserRequests(); 
+        //requests: we have an array of all requests stored in the DB.
+         let userBlock = document.querySelector('#user');
+         /*we have to be sure that every time we work with the requestsBlock,
+         this div is empty without any requests*/
+         userBlock.innerHTML='';
 
           let i =1; //order number
    
@@ -92,16 +117,14 @@ async function addPosts(){
         let requestHTML = `
     <article class="d-flex justify-content-between align-items-center article-inline">
         <div class="num w5">${i++}</div>
-        <input class="id" type="hidden" value="${request.id}">
-        <div class="name w60">${request.email}</div>
-        <div class="date w30">${request.date}</div>
-        <div class="remove w5"><button class="btn btn-link btn-remove">X</button></div>
+        <input class="id" type="hidden" id ="id" value="${request.id}">
+        <div class="name w60">${request.name}</div>
+        <div class="date w30">${request.email}</div>
     </article>`;
     //Let's add some articles
-    Block.insertAdjacentHTML('beforeend', requestHTML);
+    userBlock.insertAdjacentHTML('beforeend', requestHTML);
     })
     }
-
 //---
 async function addEmails(){
     let emails = await getEmails(); 
