@@ -1,4 +1,4 @@
-// creating schema and class
+g// creating schema and class
 
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
