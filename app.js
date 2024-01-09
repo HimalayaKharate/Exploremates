@@ -11,6 +11,7 @@ let Post = require('./models/posts').Post;
 let auth = require('./controllers/auth');
 let subRouter = require('./routes/sub');
 let loginRouter = require('./routes/user_login');
+const { render } = require('ejs');
 app.set('view engine', 'ejs');
 
 
@@ -50,6 +51,21 @@ app.get('/sight', async (req, res) =>{
 app.get('/user_login',(req,res)=>{
     res.render('user_login');
 })
+
+app.get('/', (req, res)=>{
+    var log;
+    let token = req.cookies['user_token'];
+    if(token && auth.checkToken(token)){ //token should not be empty!
+       log = 'log out'
+    }else{
+        log = 'log in'
+    }
+     res.render('main',{
+        log: log
+     });
+})
+
+
 
 
 app.get('/admin', (req,res) =>{

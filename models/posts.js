@@ -13,7 +13,8 @@ let postSchema = new Schema({
     text: String,
     country: String,
     imageUrl: String,
-    mapUrl: String
+    mapUrl: String,
+    price: Number
 });
 //Creating model
 let Post = mongoose.model('Post', postSchema);

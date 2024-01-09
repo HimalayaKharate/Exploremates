@@ -1,3 +1,5 @@
+let logOutBtn = document.querySelector('.log-out-btn');
+
 document.addEventListener('DOMContentLoaded', async function(){
     let posts = await getPosts(); 
     //posts: we have an array of all post stored in the DB.
@@ -9,9 +11,10 @@ document.addEventListener('DOMContentLoaded', async function(){
     posts.forEach((post) =>{
         let postHTML = `
         <div class="card">
-                <h3>${post.title}</h3>
+               <h3>${post.title}</h3>
                 <div class="img_text">
-                    <img src="${post.imageUrl}" alt="">
+                <a href="/sight?id=${post.id}">
+                    <img src="${post.imageUrl}" alt=""></a>
                     <h4>The Lotus Temple is an edifice of Bahai faith, resembling a lotus flower. It’s constructed purely with white marble and designed by Furiburz Sabha.</h4>
                 </div>
                 <div class="cont_box">
@@ -27,9 +30,15 @@ document.addEventListener('DOMContentLoaded', async function(){
                         <div class="days">Expected<br>Days<br>3</div>
                     </div>
                 </div>
-
+        
 `;
     //Let's add some articles
     articles.insertAdjacentHTML('beforeend', postHTML);
     })
 })
+
+logOutBtn.addEventListener('click', function(){
+    document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+    window.location.href = '/';
+})
+

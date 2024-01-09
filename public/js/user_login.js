@@ -1,3 +1,5 @@
+let logOutBtn = document.querySelector('.log-out-btn');
+
 let signInForm = document.querySelector('.sign-in-form');
 let registerForm = document.querySelector('.register-form');
 
@@ -41,4 +43,9 @@ registerForm.addEventListener('submit', function(e){
     }).then((res) => res.text())
     .then((data) => alert(data));
     
+})
+
+logOutBtn.addEventListener('click', function(){
+    document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+    window.location.href = '/';
 })

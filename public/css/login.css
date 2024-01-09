@@ -79,7 +79,7 @@ i{
     outline: none;
     background: rgba(0,0,0,0.7);
     cursor: pointer;
-    transition: .3s linear;
+    transition: .1s linear;
     margin-top: 10px;
 }
 

@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./css/homepg.css">
     <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+
+
 </head>
 <body>
     <header>
@@ -17,9 +20,8 @@
                 <li><a href="#hd">Holiday Ideas</a></li>
                 <li><a href="@">Image Gallary</a></li>
                 <li><a href="./aboutus.html">About Us</a></li>
-                <li><a href="#contactUs">Contact Us</a></li>
-                <li><a href="/user_login">Login</a></li>
-                <li><a href="/user_login " class="log-out-btn">Logout</a></li>
+                <li><a href="discover.html#contactUs">Contact Us</a></li>
+                <li><a href="/user_login" class="log-out-btn"><%= log %></a></li>
             </ul>
             <i class="bi bi-three-dots"></i>
         </nav>
@@ -27,7 +29,8 @@
             <div class="cont_box">
                 <h1>Wanderlust and Adventures Await</h1>
                 <p>Excitement beckons, wanderlust whispers, adventures unfold in life's vast journey.</p>
-                <button>Start Your Search</button>
+                <a href="/discover.html"><button >Start Your Search</button></a>
+                
             </div>
             <div class="trip_box">
                 <div class="search_box">
@@ -46,13 +49,13 @@
                     <input type="button" value="Explore Now">     
                 </div>
                 <div class="travel_box">
-                     <h4>States To Travel</h4>
+                     <h4>Places To Travel</h4>
                      <div class="cards">
                         <div class="card">
                             <h3>Maharashtra <!--<img src="maharashtra.png" alt="">--></h3>
                             <img src="images/mumbai.jpg" alt="mumbai city">
                             <div class="btn_city">
-                                <a href="@">Read Now</a>
+                                <a href="/sight?id=1zx6wujvklr3ea067">Read Now</a>
                                 <h5>Mumbai Central</h5>
                             </div>
                         </div>
@@ -122,6 +125,9 @@
             </div>
         </div>
     </div>
+
+
+    
     <footer>
         <h2>Subscribe & <br>get daily updates</h2>
         <p>After subscription you will get daily updates of trending destinations.</p>
@@ -138,7 +144,6 @@
 			  </form>
 		</div>
         <div class="col-2 d-flex justify-content-end align-items-center" >
-            <button class="btn btn-primary" id="contactUs" data-toggle="modal" data-target="#myModal" style="text-wrap: nowrap; margin:10px;">Contact Us</button>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeSmGCOlInBTlybifUk6a3i_gSlbYS_gLkT0yIcP2pBV9pyw/viewform?usp=sf_link"><button class="btn btn-primary" style="text-wrap: nowrap; margin:10px;">Feedback</button></a>
         </div>
         <ul>
