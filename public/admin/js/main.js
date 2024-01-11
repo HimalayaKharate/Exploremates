@@ -1,5 +1,10 @@
 let addPostBtn = document.querySelector('.create-post-btn');
 let logOutBtn = document.querySelector('.log-out-btn');
+async function getBuyRequests(){
+    return await fetch('http://localhost:3000/buy/submit')
+          .then((res) => res.json())
+          .then((data) => data);
+  }
 
 
 //This event happens when the object document is completely loaded.
@@ -10,6 +15,7 @@ document.addEventListener('DOMContentLoaded',function(){
     addEmails();
     addSub();
     addUser();
+    addBuy();
 })
 
 addPostBtn.addEventListener('click', function(){
@@ -97,7 +103,6 @@ async function addPosts(){
                 <div class="date w30">${request.date}</div>
             </article>`;
             //Let's add some articles
-            console.log(requestHTML)
             Block.insertAdjacentHTML('beforeend', requestHTML);
         })
     }
@@ -149,6 +154,31 @@ emails.forEach((emailRequest) =>{
 </article>`;
 //Let's add some articles
 emailsBlock.insertAdjacentHTML('beforeend', emailHTML);
+})
+}
+
+
+async function addBuy(){
+    let buy = await getBuyRequests(); 
+    //emails: we have an array of all emails stored in the DB.
+     let buyBlock = document.querySelector('#v-pills-buy');
+     /*we have to be sure that every time we work with the emailsBlock,
+     this div is empty without any requests*/
+     buyBlock.innerHTML='';
+
+      let i =1; //order number
+
+buy.forEach((buyRequest) =>{
+    let buyHTML = `
+<article class="d-flex justify-content-between align-items-center article-inline">
+    <div class="num w5">${i++}</div>
+    <input class="id" type="hidden" value="${buyRequest.id}">
+    <div class="name w30">${buyRequest.fn+ " " + buyRequest.ln}</div>
+    <div class="email w30">${buyRequest.dateD}</div>
+    <div class="date w30">${buyRequest.dateR}</div>
+</article>`;
+//Let's add some articles
+buyBlock.insertAdjacentHTML('beforeend', buyHTML);
 })
 }
 

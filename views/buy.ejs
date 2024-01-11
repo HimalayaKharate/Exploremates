@@ -5,6 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/finalabout.css">
     <title>Exploremates - Buying Panel</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .body{
+            display: flex;
+            justify-content: center;
+            margin: 10px 10px 10px 10px;
+            align-items: center;
+            min-height: 100vh;
+            background-size: cover ;
+            background-position: center;
+
+        }
+        .loginbox{
+            width: 1000px;
+            background-color: rgb(249, 249, 249);   
+            height: auto;
+            opacity: inherit;
+            border-radius: 10px;
+            padding: 30px 40px ;
+            border: #000000;
+            box-shadow: 5px 10px 10px 0px black;
+            
+        }
+        .loginbox h1{
+            font-size: 40px;
+            text-align: center;
+        }
+        .loginbox .inputbox{
+            position: relative;
+            width: 100%;
+            height: 50%;
+            margin: 30px 0;
+        }
+        .inputbox input{
+            border: none;
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            font-size: 16px;
+            color: black;
+            padding: 20px 45px  20px 20px ;
+            opacity: 0.5;
+            box-shadow: 0px 1px 7px 0.4px rgba(0, 0, 0, 0.53);
+        }
+        .inputbox input::placeholder{
+            color:#505050;
+        }
+        .inputbox i{
+            position:absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+        .inputbox:hover{
+            opacity: 1;
+            
+        }
+        .inputbox .remember-forgot{
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin: -15px 0 15px;
+
+        }
+        .remember-forgot label input{
+            accent-color: #2f3742;
+            margin-right: 0px;
+        }
+        .remember-forgot a{
+
+            margin-left: 25px;
+            color: #2f3742;
+            text-decoration: none;
+        }
+        .remember-forgot a:hover{
+            text-decoration:underline;
+        }
+        .loginbox .btn{
+            margin-top:25px ;
+            width: 100%;
+            height: 45px;
+            background: #10141a;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            cursor: pointer;
+            font-size: 16px;
+            color: rgb(246, 245, 245);
+            font-weight: 600;
+        }
+        .loginbox .regi-link{
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        .regi-link p a {
+            color: #2f3742;
+            text-decoration:none;
+            font-weight: 600;
+            margin: 20px 0 15px;
+            font-size: 20px;
+        }
+        .regi-link p a:hover {
+    
+            text-decoration: none;
+
+        }
+        .btn:hover{
+            background-color:#ffff;
+            color: #0b0f14;
+            box-shadow: 2px 7px 15px;
+            transition: 0.5s;
+        }
+        .regi-link p {
+            font-size: 15px;
+        }
+         /* Footer styling */
+         footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            right: 0;
+            line-gap-override: 20px;
+            
+        }
+        .footer a{
+            color: #fff;
+            text-decoration: none;
+            font-size:15px;
+            padding: 10px 10px 10px 10px;
+            margin: 5px 10px;
+            
+
+        }
+        .footer  a:hover{
+            color: gray;
+            font-size: 14px;
+            
+        } 
+        
+        .pass a{
+            color: #10141a;
+            margin-top: 25px;
+        }
+
+        .pass{
+            margin-top: 15px;
+        }
+
+        .inputbox{
+            display: flex;
+        }
+        
+        .inputbox p{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header >
@@ -20,5 +194,63 @@
             </ul>
         </nav>
 	</header>
+
+<div class="body">
+<div class="pot">
+    
+        <div class="loginbox">
+   
+            <h1>BUYING PACKAGE</h1>
+        <form class="buyForm">
+            <div class="inputbox">
+            
+                <input type="text" placeholder="First Name" id="fs"name="First Name">
+                <input type="text" placeholder="Second Name" id="mn" name="Second Name">
+                <input type="text" placeholder="Last Name" id="ln" name="Last Name">
+                
+            
+            </div>
+
+            <div class="inputbox">
+                <h5>Departure Date</h5>   
+                <input type="date"  placeholder="Departure Date" id="dateD" date="enter date">
+            </div>
+            <p>to</p>
+            <div class="inputbox">
+            
+                <h5>Return Date</h5>
+                <input type="date" placeholder="Return Date" id="dateR" date="enter date">
+                
+                
+            
+            </div>
+
+        
+            <box-icon name='lock-alt' type='solid' ></box-icon>
+
+            <div class="pass">
+                <h5>Billing Information</h5>
+                
+            </div>
+
+            <div class="inputbox">
+            
+                <input type="text" placeholder="Enter your Phone Pay ID" id="payId" name="Phone Pay" required>
+                
+            
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox" required> Terms and Conditions</label>
+            
+            </div>
+            
+           <button type="submit" class="btn">Submit</button> 
+        </form>
+        </div> 
+</div>
+</div> 
+<script src="js/main2.js"></script>
+<script src="js/buy.js"></script>
 </body>
 </html>

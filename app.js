@@ -10,6 +10,7 @@ let usersRouter = require('./routes/users');
 let Post = require('./models/posts').Post;
 let auth = require('./controllers/auth');
 let subRouter = require('./routes/sub');
+let buyRouter = require('./routes/buy');
 let loginRouter = require('./routes/user_login');
 const { render } = require('ejs');
 app.set('view engine', 'ejs');
@@ -29,6 +30,7 @@ app.use(cookieParser()); //so that cookies are automatically generated for every
 app.use('/posts', postsRouter);
 app.use('/callback-requests', callbackRequestsRouter);
 app.use('/email-requests',subRouter);
+app.use('/buy',buyRouter);
 /*That means that when the request is made on the route path which starts with /callback-requests,
 then it will be redirected callback-requests.js*/
 app.use('/emails', emailsRouter);
@@ -50,7 +52,8 @@ app.get('/sight', async (req, res) =>{
         imageUrl: post.imageUrl,
         date: post.date,
         text: post.text,
-        mapUrl:post.mapUrl
+        mapUrl:post.mapUrl,
+        price: post.price
     })
 })
 

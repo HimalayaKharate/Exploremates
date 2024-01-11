@@ -22,7 +22,7 @@ router.get('/:id', async (req, resp) => {
 //Create post in DB
 router.post('/', authMiddleware, async (req,res) =>{
     let reqBody = req.body;
-    let imgPath,mapPath;
+    let imgPath,mapPath, priceVal;
     if(reqBody.imageUrl) {
         imgPath = reqBody.imageUrl;
     }else{
@@ -32,6 +32,10 @@ router.post('/', authMiddleware, async (req,res) =>{
     if(reqBody.mapUrl){
         mapPath = reqBody.mapUrl;
     }
+    if(reqBody.price){
+        priceVal = reqBody.price
+    }
+    console.log(reqBody);
 //path.sep==>now the file separator will be chosen according to your operating system.
     let newPost = new Post({
         id: uniqid(), 
@@ -40,12 +44,10 @@ router.post('/', authMiddleware, async (req,res) =>{
         description: reqBody.description,
         text: reqBody.text,
         country: reqBody.country,
-      //imageUrl: reqBody.imageUrl
        imageUrl: imgPath,
-       mapUrl: mapPath
+       mapUrl: mapPath,
+       price: priceVal
     })
-    //console.log(newPost);
-    //console.log(req.file);
     await newPost.save(); //save func is async!
     res.send('Created!');
 })

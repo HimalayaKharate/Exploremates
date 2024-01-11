@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async function(){
 
     posts.forEach((post) =>{
         let postHTML = `
-        <div style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin-right: 20px; margin-bottom: 20px;">
+        <div style=" width: 45%;border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin-right: 20px; margin-bottom: 20px;">
     <img src="${post.imageUrl}" alt="${post.title}" style="width: 100%; height: auto; border-bottom: 1px solid #ccc;">
     <div style="padding: 15px;">
         <h4 style="margin: 0; font-size: 1.5em; color: #333;">${post.title}</h4>

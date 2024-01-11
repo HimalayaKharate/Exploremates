@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async function(){
                         </div>
                         <div class="info_price">
                             <a href="/buy">Buy</a>
-                            <h4>$360</h4>
+                            <h4>₹ ${post.price}</h4>
                         </div>
                         <div class="days">Expected<br>Days<br>3</div>
                     </div>

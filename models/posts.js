@@ -5,7 +5,6 @@ let Schema = mongoose.Schema;
 
 //creating schema
 let postSchema = new Schema({
-   // id:Number,
     id:String,
     title:String,
     date:Date,
@@ -14,7 +13,7 @@ let postSchema = new Schema({
     country: String,
     imageUrl: String,
     mapUrl: String,
-    price: Number
+    price: String
 });
 //Creating model
 let Post = mongoose.model('Post', postSchema);
